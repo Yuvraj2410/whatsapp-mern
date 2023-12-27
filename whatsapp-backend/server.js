@@ -19,6 +19,7 @@ const pusher = new Pusher({
 
 // middlewares
 app.use(express.json());
+// app.use(cors());
 app.use(cors(
     {
         origin: ['https://whatsapp-mern-frontend-nine.vercel.app'],
@@ -34,8 +35,8 @@ app.use(cors(
 // });
 
 // const connection_url='mongodb+srv://bhadauriasinghyuvraj12:HhjtemIIYw8RD1Lj@cluster0.wg0qa3x.mongodb.net/?retryWrites=true&w=majority'
-// const connection_url='mongodb+srv://bhadauriasinghyuvraj12:HhjtemIIYw8RD1Lj@cluster0.wg0qa3x.mongodb.net/'
-const connection_url = 'mongodb+srv://bhadauriasinghyuvraj12:HhjtemIIYw8RD1Lj@cluster0.wg0qa3x.mongodb.net/test?retryWrites=true&w=majority'
+const connection_url='mongodb+srv://bhadauriasinghyuvraj12:HhjtemIIYw8RD1Lj@cluster0.wg0qa3x.mongodb.net/'
+// const connection_url = 'mongodb+srv://bhadauriasinghyuvraj12:HhjtemIIYw8RD1Lj@cluster0.wg0qa3x.mongodb.net/test?retryWrites=true&w=majority'
 mongoose.connect(connection_url)
 
 const db = mongoose.connection;
@@ -64,10 +65,11 @@ db.once("open", () =>{
 });
 
 // api routes
-app.get('/', (req,res) => {
-    res.json('hello');
-} 
-// res.status(200).send('hello world')
+app.get('/', (req,res) => 
+// {
+//     res.json('hello');
+// } 
+res.status(200).send('hello world')
 );
 
 app.get('/messages/sync', async (req, res) => {
