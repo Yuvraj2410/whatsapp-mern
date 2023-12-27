@@ -35,8 +35,8 @@ app.use(cors(
 // });
 
 // const connection_url='mongodb+srv://bhadauriasinghyuvraj12:HhjtemIIYw8RD1Lj@cluster0.wg0qa3x.mongodb.net/?retryWrites=true&w=majority'
-const connection_url='mongodb+srv://bhadauriasinghyuvraj12:HhjtemIIYw8RD1Lj@cluster0.wg0qa3x.mongodb.net/'
-// const connection_url = 'mongodb+srv://bhadauriasinghyuvraj12:HhjtemIIYw8RD1Lj@cluster0.wg0qa3x.mongodb.net/test?retryWrites=true&w=majority'
+// const connection_url='mongodb+srv://bhadauriasinghyuvraj12:HhjtemIIYw8RD1Lj@cluster0.wg0qa3x.mongodb.net/'
+const connection_url = 'mongodb+srv://bhadauriasinghyuvraj12:HhjtemIIYw8RD1Lj@cluster0.wg0qa3x.mongodb.net/test?retryWrites=true&w=majority'
 mongoose.connect(connection_url)
 
 const db = mongoose.connection;
